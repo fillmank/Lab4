@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZmlsbG1hbmsiLCJhIjoiY203YzgyZ2V0MG1scjJrcHY3a
 // Initialize the map
 const map = new mapboxgl.Map({
     container: 'map', // Container ID
-    style: 'mapbox://styles/fillmank/cm7jnr0ut00l201so6bs585u7', // Your Mapbox style
+    style: 'mapbox://styles/fillmank/cm7jnr0ut00l201so6bs585u7', // Mapbox style
     projection: 'albers', // Projection
     zoom: 3, // Initial zoom level
     center: [-98.79539, 40.07263] // Initial center coordinates
@@ -14,7 +14,7 @@ const map = new mapboxgl.Map({
 // Load GeoJSON data and add it as a layer
 map.on('load', () => {
     // Fetch GeoJSON data
-    fetch('https://raw.githubusercontent.com/fillmank/Lab4/main/data/fuel.geojson')
+    fetch('/data/fuel.geojson')
         .then(response => response.json())
         .then(data => {
             // Add the GeoJSON source to the map
