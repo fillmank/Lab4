@@ -14,7 +14,7 @@ const map = new mapboxgl.Map({
 // Load GeoJSON data and add it as a layer
 map.on('load', () => {
     // Fetch GeoJSON data
-    fetch('/data/fuel.geojson')
+    fetch('https://raw.githubusercontent.com/fillmank/Lab4/main/data/fuel.geojson')
         .then(response => response.json())
         .then(data => {
             // Add the GeoJSON source to the map
